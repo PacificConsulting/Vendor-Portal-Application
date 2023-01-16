@@ -826,7 +826,7 @@ table 50064 "Portal Vend Updated Purch Rec"
         //PortalVendUpdatedPurchRec1.
     end;
 
-    [Scope('Internal')]
+    //[Scope('Internal')]
     procedure sendMailToBroker(DocNo: Code[50])
     begin
         /*
