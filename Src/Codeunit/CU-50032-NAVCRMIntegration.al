@@ -7,7 +7,7 @@ codeunit 50032 "NAV CRM Integration"
         //GenerateVehicleTracking('CD/1617/00007');
     end;
 
-    [Scope('Internal')]
+    //    [Scope('Internal')]
     procedure GenerateInvoiceNo(InvoiceNo: Code[20]): Text[100]
     var
         SalesSetup: Record 311;
@@ -22,16 +22,17 @@ codeunit 50032 "NAV CRM Integration"
     // Purchase_OrderFA_T: Report "50036"; //PCPL-0070 
     begin
         SalesSetup1.GET();
-        IF SalesSetup1."WO Sales Invoice Path" = '' THEN
-            ERROR('Define the HTML file path in Sales Setup.');
+        // IF SalesSetup1."WO Sales Invoice Path" = '' THEN
+        //     ERROR('Define the HTML file path in Sales Setup.'); //PCPL-0070
 
         SalesInvHeader.SETRANGE("No.", InvoiceNo);
         IF SalesInvHeader.FINDFIRST THEN BEGIN
-            IF COPYSTR(SalesSetup1."WO Sales Invoice Path", STRLEN(SalesSetup1."WO Sales Invoice Path"), 1) <> '\' THEN
-                HTMLPath := SalesSetup1."WO Sales Invoice Path" + '\'
-            ELSE
-                HTMLPath := SalesSetup1."WO Sales Invoice Path";
-
+            /* PCPL-0070 <<
+             IF COPYSTR(SalesSetup1."WO Sales Invoice Path", STRLEN(SalesSetup1."WO Sales Invoice Path"), 1) <> '\' THEN
+                 HTMLPath := SalesSetup1."WO Sales Invoice Path" + '\'
+             ELSE
+                 HTMLPath := SalesSetup1."WO Sales Invoice Path";
+ */ //PCPL-0070 >>
             FOR i := 1 TO STRLEN(InvoiceNo) DO BEGIN
                 IF (InvoiceNo[i] = '/') OR
                    (InvoiceNo[i] = '\') OR
@@ -40,8 +41,8 @@ codeunit 50032 "NAV CRM Integration"
                     InvoiceNo[i] := '_';
             END;
 
-            IF EXISTS(HTMLPath + InvoiceNo + '.pdf') THEN
-                ERASE(HTMLPath + InvoiceNo + '.pdf');
+            // IF EXISTS(HTMLPath + InvoiceNo + '.pdf') THEN
+            //     ERASE(HTMLPath + InvoiceNo + '.pdf'); //PCPL-0070
             /*
               CLEAR(CSTRep);
               CSTRep.USEREQUESTPAGE := FALSE;
@@ -52,9 +53,11 @@ codeunit 50032 "NAV CRM Integration"
             PurchaseHeader.RESET;
             PurchaseHeader.SETRANGE(PurchaseHeader."No.", SalesInvHeader."No.");
             IF PurchaseHeader.FINDSET THEN BEGIN
+                /* PCPL-0070 <<
                 recVend.RESET;
                 recVend.SETRANGE(recVend."No.", PurchaseHeader."Buy-from Vendor No.");
                 IF recVend.FINDFIRST THEN
+                   
                     IF recVend."Vendor Posting Group" = 'CR-RM' THEN BEGIN
 
                         Purchase_OrderNGL_T.SETTABLEVIEW(PurchaseHeader);
@@ -68,6 +71,7 @@ codeunit 50032 "NAV CRM Integration"
                         Purchase_OrderFA_T.SAVEASPDF(HTMLPath + InvoiceNo + '.pdf');
                         CLEAR(Purchase_OrderFA_T);
                     END;
+                  */ //PCPL-0070 >>  
             END;
             //PCPL-0025 30oct2018
 
