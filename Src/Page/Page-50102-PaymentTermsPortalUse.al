@@ -1,4 +1,4 @@
-page 50102 "Payment Terms PortalUse"
+page 50120 "Payment Terms PortalUse"
 {
     PageType = List;
     SourceTable = "Payment Terms PortalUse";
@@ -12,7 +12,7 @@ page 50102 "Payment Terms PortalUse"
                 field(Code; Rec.Code)
                 {
                     TableRelation = "Payment Terms".Code;
-
+                    ApplicationArea = All;
                     trigger OnValidate()
                     begin
                         recpayment.RESET;
@@ -24,6 +24,7 @@ page 50102 "Payment Terms PortalUse"
                 }
                 field(Descripion; Rec.Descripion)
                 {
+                    ApplicationArea = All;
                 }
             }
         }

@@ -90,7 +90,7 @@ table 50062 "Item Vendor Catalog"
 
     var
         Vend: Record 23;
-        ItemCrossReference: Record 5717;
+        //ItemCrossReference: Record 5717;
         DistIntegration: Codeunit 5702;
         LeadTimeMgt: Codeunit 5404;
 }

@@ -11,46 +11,59 @@ page 50103 "Purchaser Approvals Lines"
             {
                 field("Entry Type"; Rec."Entry Type")
                 {
+                    ApplicationArea = All;
                 }
                 field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
                 }
                 field("Line No."; Rec."Line No.")
                 {
+                    ApplicationArea = All;
                 }
                 field(Date; Rec.Date)
                 {
+                    ApplicationArea = All;
                 }
                 field(Type; Rec.Type)
                 {
+                    ApplicationArea = All;
                 }
                 field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
                 }
                 field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
                 }
                 field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
                     Editable = false;
                 }
                 field("PO Qty"; Rec."PO Qty")
                 {
+                    ApplicationArea = All;
                 }
                 field(Approved; Rec.Approved)
                 {
                     Visible = false;
+                    ApplicationArea = All;
                 }
                 field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
                 }
                 field("Description 2"; Rec."Description 2")
                 {
+                    ApplicationArea = All;
                 }
                 field("Unit of Measure Code"; Rec."Unit of Measure Code")
                 {
+                    ApplicationArea = All;
                 }
-                field("Requisition Line No."; Rec."Requisition Line No.")
+                /* field("Requisition Line No."; Rec."Requisition Line No.")
                 {
                     Visible = false;
                 }
@@ -77,14 +90,16 @@ page 50103 "Purchaser Approvals Lines"
                 field("Material Requisitioned"; Rec."Material Requisitioned")
                 {
                     Visible = false;
-                }
+                } */
                 field(Remark; Rec.Remark)
                 {
+                    ApplicationArea = All;
                 }
                 field("USER ID"; Rec."USER ID")
                 {
+                    ApplicationArea = All;
                 }
-                field("FA Component Category"; Rec."FA Component Category")
+                /* field("FA Component Category"; Rec."FA Component Category")
                 {
                     Visible = false;
                 }
@@ -99,14 +114,16 @@ page 50103 "Purchaser Approvals Lines"
                 field("Item Category Code"; Rec."Item Category Code")
                 {
                     Visible = false;
-                }
+                } */
                 field(Category; Rec.Category)
                 {
+                    ApplicationArea = All;
                 }
                 field("Variant Code"; Rec."Variant Code")
                 {
+                    ApplicationArea = All;
                 }
-                field("Approved Date"; Rec."Approved Date")
+                /* field("Approved Date"; Rec."Approved Date")
                 {
                     Visible = false;
                 }
@@ -145,11 +162,12 @@ page 50103 "Purchaser Approvals Lines"
                 field("Comment for Close"; Rec."Comment for Close")
                 {
                     Visible = false;
-                }
+                } */
                 field(Closingqty; Rec.Closingqty)
                 {
+                    ApplicationArea = All;
                 }
-                field("Vendor Unit_ Price"; Rec."Vendor Unit_ Price")
+                /* field("Vendor Unit_ Price"; Rec."Vendor Unit_ Price")
                 {
                     Visible = false;
                 }
@@ -196,12 +214,14 @@ page 50103 "Purchaser Approvals Lines"
                 field("PO Status"; Rec."PO Status")
                 {
                     Visible = false;
-                }
+                } */
                 field("Quotation Qty"; Rec."Quotation Qty")
                 {
+                    ApplicationArea = All;
                 }
                 field("Indent Closing Date"; Rec."Indent Closing Date")
                 {
+                    ApplicationArea = All;
                     Visible = false;
                 }
             }

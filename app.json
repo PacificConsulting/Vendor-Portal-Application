@@ -2,7 +2,7 @@
   "id": "dfa731e5-040d-42c6-a74a-8c213ba79bca",
   "name": "Vendor Portal Application",
   "publisher": "Pacific",
-  "version": "1.0.0.0",
+  "version": "1.0.0.1",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -35,7 +35,7 @@
     "version": "18.3.27240.27480"
   },
   {
-    "appId": "eddcf82e-482c-49d1-836b-ad0284f2c5b0",
+    "id": "eddcf82e-482c-49d1-836b-ad0284f2c5b0",
     "publisher": "Microsoft",
     "name": "India TCS",
     "version": "18.3.27240.27480"

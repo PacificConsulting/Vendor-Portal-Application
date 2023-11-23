@@ -13,21 +13,27 @@ page 50106 "Specification Header"
             {
                 field("Specs ID"; Rec."Specs ID")
                 {
+                    ApplicationArea = All;
                 }
                 field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
                 }
                 field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
                 }
                 field("Version Nos."; Rec."Version Nos.")
                 {
+                    ApplicationArea = All;
                 }
                 field("Last Date Modified"; Rec."Last Date Modified")
                 {
+                    ApplicationArea = All;
                 }
                 field("Active Version"; activeVersion)
                 {
+                    ApplicationArea = All;
                     Caption = 'Active Version';
                     Editable = false;
 
@@ -67,7 +73,7 @@ page 50106 "Specification Header"
                 PromotedCategory = Process;
                 //RunObject = Page 50043;
                 //RunPageLink = "Specs ID"=FIELD("Specs ID"); //PCPL-0070 
-
+                ApplicationArea = All;
                 trigger OnAction()
                 begin
                     Rec.TESTFIELD(Status, Rec.Status::Certified);

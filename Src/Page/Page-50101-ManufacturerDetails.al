@@ -1,4 +1,4 @@
-page 50101 "Manufacturer Details"
+page 50119 "Manufacturer Details"
 {
     Caption = 'Manufacturer Details';
     PageType = List;
@@ -14,13 +14,16 @@ page 50101 "Manufacturer Details"
                 {
                     Caption = 'Item Code';
                     TableRelation = Item;
+                    ApplicationArea = All;
                 }
                 field("Brand Name"; Rec."Brand Name")
                 {
+                    ApplicationArea = All;
                     Caption = 'Manufacturer Name';
                 }
                 field(Location; Rec.Location)
                 {
+                    ApplicationArea = All;
                     TableRelation = Location;
                 }
             }
