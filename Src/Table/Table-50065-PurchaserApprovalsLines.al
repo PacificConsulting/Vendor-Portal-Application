@@ -224,6 +224,7 @@ table 50065 "Purchaser Approvals Lines "
         field(26; "Product Group Code"; Code[20])
         {
             TableRelation = "Product Group".Code;
+            //
         }
         field(27; "Item Category Code"; Code[10])
         {
